@@ -103,6 +103,8 @@ export default {
   background: url("../assets/images/main-bg.jpg");
   background-size: cover;
 
+  padding: 0 100px;
+
   color: $white;
 
   .container {
@@ -140,6 +142,8 @@ export default {
       padding: 8px;
       background: $white;
       border-radius: 12px;
+
+      box-sizing: border-box;
 
       &__input {
         width: 100%;
