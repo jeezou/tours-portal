@@ -86,7 +86,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 100px 0 100px;
+  padding: 0 50px;
 
   box-sizing: border-box;
 
@@ -104,92 +104,176 @@ export default {
     row-gap: 32px;
 
     border-top: 2px solid $border;
+  }
+  .introduction {
+    padding-top: 63px;
+    padding-right: 75px;
 
-    .introduction {
-      padding-top: 63px;
-      padding-right: 75px;
+    grid-area: intro;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 32px;
 
-      grid-area: intro;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      row-gap: 32px;
+    border-right: 2px solid $border;
+    border-bottom: 2px solid $border;
 
-      border-right: 2px solid $border;
-      border-bottom: 2px solid $border;
+    .logo {
+      height: 36px;
+    }
 
-      .logo {
-        height: 36px;
-      }
+    &__p {
+      font-family: "Inter", sans-serif;
+      color: $form-gray-1;
+      line-height: 175%;
+      text-align: left;
+      font-weight: 400;
+    }
+  }
 
-      &__p {
-        font-family: "Inter", sans-serif;
+  .links {
+    grid-area: links;
+
+    position: relative;
+
+    padding: 63px 0 64px 40px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    border-bottom: 2px solid $border;
+
+    .back-to-top {
+      position: absolute;
+      right: 0;
+      bottom: 64px;
+      cursor: pointer;
+    }
+
+    .group {
+      &__heading {
+        font-size: 17px;
         color: $form-gray-1;
-        line-height: 175%;
-        text-align: left;
         font-weight: 400;
+        margin-bottom: 24px;
       }
+
+      &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+
+        &--inline {
+          flex-direction: row;
+          column-gap: 13px;
+        }
+      }
+
+      &__item > * {
+        text-decoration: none;
+        color: $black;
+
+        cursor: pointer;
+      }
+    }
+  }
+
+  .rights {
+    display: flex;
+    align-items: flex-end;
+    color: $form-gray-1;
+    font-weight: 400;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    align-items: flex-end;
+    color: $form-gray-1;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .footer {
+    .introduction {
+      padding-top: 40px;
+      padding-right: 30px;
     }
 
     .links {
-      grid-area: links;
-
-      position: relative;
-
-      padding: 63px 0 64px 40px;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      border-bottom: 2px solid $border;
-
-      .back-to-top {
-        position: absolute;
-        right: 0;
-        bottom: 64px;
-        cursor: pointer;
-      }
-
+      padding-top: 40px;
+      padding-left: 25px;
+      grid-template-columns: 2fr 1fr 1fr;
       .group {
-        &__heading {
-          font-size: 17px;
-          color: $form-gray-1;
-          font-weight: 400;
-          margin-bottom: 24px;
-        }
-
         &__list {
-          display: flex;
-          flex-direction: column;
-          row-gap: 16px;
-
           &--inline {
-            flex-direction: row;
-            column-gap: 13px;
+            flex-direction: column;
+            align-items: center;
           }
         }
+      }
+    }
+  }
+}
 
-        &__item > * {
-          text-decoration: none;
-          color: $black;
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 0 25px;
+    .container {
+      grid-template-areas:
+        "intro intro"
+        "links links"
+        "rights contacts";
 
-          cursor: pointer;
+      row-gap: 0;
+      padding-bottom: 0;
+    }
+    .introduction {
+      padding: 40px 0 40px;
+
+      border: none;
+      border-bottom: 2px solid $border;
+    }
+
+    .links {
+      padding: 40px 0;
+      grid-template-columns: 1.5fr 1fr 1fr;
+
+      .group {
+        &__list {
+          &--inline {
+            flex-direction: row;
+          }
         }
       }
     }
 
-    .rights {
-      display: flex;
-      align-items: flex-end;
-      color: $form-gray-1;
-      font-weight: 400;
+    .rights,
+    .contacts {
+      padding: 20px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer {
+    .links {
+      padding: 40px 0;
+      grid-template-columns: 2fr 1fr 1fr;
+
+      .group {
+        &__list {
+          &--inline {
+            align-items: flex-start;
+            flex-direction: column;
+          }
+        }
+      }
     }
 
+    .rights,
     .contacts {
-      display: flex;
-      flex-direction: column;
-      row-gap: 8px;
-      align-items: flex-end;
-      color: $form-gray-1;
-      font-weight: 400;
+      padding: 20px 0;
     }
   }
 }
