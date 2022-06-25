@@ -68,28 +68,61 @@ export default {
   .container {
     width: 100%;
     max-width: 1320px;
+  }
+  .heading {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 56px;
+    margin-bottom: 16px;
 
-    .heading {
-      font-size: 36px;
-      font-weight: 500;
-      line-height: 56px;
-      margin-bottom: 16px;
+    color: $white;
+  }
 
-      color: $white;
-    }
+  .desc {
+    font-size: 18px;
+    color: $form-gray-1;
+    line-height: 28px;
+    font-weight: 400;
+  }
 
+  .flip-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .flip-game {
+    padding: 60px 50px 150px 50px;
+    .heading,
     .desc {
-      font-size: 18px;
-      color: $form-gray-1;
-      line-height: 28px;
-      font-weight: 400;
+      text-align: center;
     }
-
     .flip-cards {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+
+      > * {
+        margin-bottom: -80px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flip-game {
+    padding: 60px 50px 150px 50px;
+    .heading,
+    .desc {
+      text-align: center;
+    }
+    .flip-cards {
+      grid-template-columns: 1fr;
+      justify-items: center;
+
+      > * {
+        margin-bottom: -80px;
+      }
     }
   }
 }

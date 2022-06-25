@@ -264,7 +264,7 @@ export default {
       .group {
         &__list {
           &--inline {
-            align-items: flex-start;
+            align-items: center;
             flex-direction: column;
           }
         }

@@ -85,6 +85,13 @@ export default {
 
     &--active {
       transform: rotateY(180deg);
+      background: transparent;
+
+      // .flip-card__front {
+      //   opacity: 0;
+      //   visibility: hidden;
+      //   background-color: transparent;
+      // }
     }
   }
 
@@ -93,8 +100,9 @@ export default {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
+    visibility: visible;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 
     border-radius: 24px;
     box-shadow: inset 0 0 0 1px $card-border;
