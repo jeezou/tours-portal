@@ -182,7 +182,7 @@ export default {
     .cards {
       box-sizing: border-box;
 
-      padding: 0 25px;
+      padding: 0 35px 0 25px;
       width: 100vw;
       display: flex;
 

@@ -106,6 +106,8 @@ export default {
   color: $black;
   font-weight: 500;
 
+  background: $form-gray-2;
+
   padding: 0 100px;
 }
 
