@@ -1,5 +1,5 @@
 <template>
-  <section class="places">
+  <section class="regions">
     <div class="container">
       <h2 class="heading">Топ посещаемых регионов</h2>
       <div class="cards">
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style lang="scss">
-.places {
+.regions {
   padding: 96px 100px;
 
   background: $form-gray-2;
@@ -66,8 +66,6 @@ export default {
       grid-template-columns: repeat(4, 1fr);
 
       column-gap: 24px;
-
-      margin-bottom: 72px;
     }
   }
 }

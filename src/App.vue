@@ -4,7 +4,7 @@
 
 <style lang="scss">
 @import url("static/reset.css");
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500;700;900&display=swap");
 
 html {
   scroll-behavior: smooth;

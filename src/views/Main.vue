@@ -3,6 +3,7 @@
     <Header />
     <div class="container">
       <Places />
+      <FlipGame />
       <TopRegions />
       <Tours />
       <Invitation />
@@ -18,10 +19,19 @@ import Places from "@/components/Places.vue";
 import TopRegions from "@/components/TopRegions.vue";
 import Invitation from "@/components/Invitation.vue";
 import Tours from "@/components/Tours.vue";
+import FlipGame from "@/components/FlipGame.vue";
 
 export default {
   name: "Error",
-  components: { Footer, Header, Places, TopRegions, Invitation, Tours },
+  components: {
+    Footer,
+    Header,
+    Places,
+    TopRegions,
+    Invitation,
+    Tours,
+    FlipGame,
+  },
 };
 </script>
 
