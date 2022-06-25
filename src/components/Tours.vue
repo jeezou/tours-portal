@@ -110,10 +110,9 @@ export default {
       const cards = this.$refs.emojiCards;
       this.rightEdge = false;
       this.leftEdge = false;
-      if (cards.scrollLeft + cards.clientWidth >= cards.scrollWidth)
+      if (Math.ceil(cards.scrollLeft + cards.offsetWidth) >= cards.scrollWidth)
         this.rightEdge = true;
       else if (cards.scrollLeft <= 0) this.leftEdge = true;
-      console.log(this.$refs.emojiCards.scrollLeft);
     },
   },
 };

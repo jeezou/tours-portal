@@ -103,7 +103,7 @@ export default {
     grid-template-columns: 1fr 1fr;
     row-gap: 32px;
 
-    border-top: 2px solid $gray;
+    border-top: 2px solid $border;
 
     .introduction {
       padding-top: 63px;
@@ -115,8 +115,8 @@ export default {
       align-items: flex-start;
       row-gap: 32px;
 
-      border-right: 2px solid $gray;
-      border-bottom: 2px solid $gray;
+      border-right: 2px solid $border;
+      border-bottom: 2px solid $border;
 
       .logo {
         height: 36px;
@@ -139,7 +139,7 @@ export default {
       padding: 63px 0 64px 40px;
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr;
-      border-bottom: 2px solid $gray;
+      border-bottom: 2px solid $border;
 
       .back-to-top {
         position: absolute;
