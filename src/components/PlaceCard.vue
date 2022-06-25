@@ -37,17 +37,14 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .card {
+  cursor: pointer;
   position: relative;
-
   display: flex;
   flex-direction: column;
-
   background: $white;
-
   border-radius: 16px;
-
   overflow: hidden;
 
   &__tag {
@@ -77,8 +74,6 @@ export default {
     grid-area: like;
     width: 24px;
     justify-self: flex-end;
-
-    cursor: pointer;
   }
 
   &__name {

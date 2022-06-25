@@ -17,10 +17,12 @@
         <div class="group">
           <h3 class="group__heading">Основное</h3>
           <ul class="group__list">
-            <li class="group__item"><a href="#">Главная</a></li>
+            <li class="group__item">
+              <a href="#">Главная</a>
+            </li>
             <li class="group__item"><a href="#">Интересеные места</a></li>
             <li class="group__item">
-              <a href="#">Подбери себе виртуальный тур</a>
+              <a>Подбери себе виртуальный тур</a>
             </li>
             <li class="group__item"><a href="#">Топ посещаемых регионов</a></li>
             <li class="group__item"><a href="#">Идеи для 3D тура</a></li>
@@ -82,7 +84,11 @@ export default {
 .footer {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 100px 0 100px;
+
+  box-sizing: border-box;
 
   .container {
     max-width: 1320px;
@@ -162,6 +168,8 @@ export default {
         &__item > * {
           text-decoration: none;
           color: $black;
+
+          cursor: pointer;
         }
       }
     }
