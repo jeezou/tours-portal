@@ -4,6 +4,7 @@
     <div class="container">
       <Places />
       <TopRegions />
+      <Tours />
       <Invitation />
       <Footer />
     </div>
@@ -16,10 +17,11 @@ import Header from "@/components/Header.vue";
 import Places from "@/components/Places.vue";
 import TopRegions from "@/components/TopRegions.vue";
 import Invitation from "@/components/Invitation.vue";
+import Tours from "@/components/Tours.vue";
 
 export default {
   name: "Error",
-  components: { Footer, Header, Places, TopRegions, Invitation },
+  components: { Footer, Header, Places, TopRegions, Invitation, Tours },
 };
 </script>
 

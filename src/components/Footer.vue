@@ -90,6 +90,8 @@ export default {
 
   box-sizing: border-box;
 
+  background: $form-gray-2;
+
   .container {
     max-width: 1320px;
     padding-bottom: 32px;

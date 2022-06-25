@@ -26,6 +26,7 @@ export default {
 .invitation {
   padding: 96px 100px 196px;
   display: flex;
+  background: $form-gray-2;
   justify-content: center;
 
   .inv-card {
