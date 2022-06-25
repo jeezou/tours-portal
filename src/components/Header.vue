@@ -16,7 +16,7 @@
               src="../assets/icons/map-pin.svg"
               alt="location ico"
             />
-            Санкт-Петербург
+            <div class="location__text">Санкт-Петербург</div>
           </div>
           <div class="eye">
             <img
@@ -132,6 +132,8 @@ export default {
       font-size: 72px;
       line-height: 122%;
       color: $white;
+
+      text-align: center;
     }
 
     .search-bar {
@@ -221,54 +223,203 @@ export default {
     align-items: center;
 
     column-gap: 16px;
+  }
 
-    .logo {
-      background: rgba(0, 0, 0, 0);
-      margin-right: 21px;
+  .logo {
+    background: rgba(0, 0, 0, 0);
+    margin-right: 21px;
 
-      cursor: pointer;
+    cursor: pointer;
+  }
+
+  .controls {
+    display: flex;
+    column-gap: 16px;
+
+    > * {
+      background: $white-transparent;
+      border-radius: 12px;
+    }
+  }
+
+  .location {
+    padding: 12px 16px;
+    cursor: pointer;
+
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+
+    font-weight: 500;
+  }
+
+  .eye {
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  .lang {
+    padding: 12px 7px;
+    cursor: pointer;
+  }
+
+  .profile {
+    overflow: hidden;
+    display: flex;
+    &__avatar {
+      padding: 8px 10px 8px;
+      background: $white-transparent-light;
+
+      border-radius: 12px;
+    }
+
+    &__burger {
+      padding: 8px 12px;
+    }
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    height: 850px;
+    row-gap: 170px;
+
+    padding: 0 50px;
+
+    &__content {
+      .heading {
+        font-size: 62px;
+      }
+
+      .suggestions {
+        font-size: 14px;
+
+        .types-list,
+        .hashtags-list {
+          &__item {
+            border-radius: 10px;
+            padding: 10px 12px;
+            column-gap: 5px;
+          }
+        }
+      }
+    }
+  }
+  .nav-bar {
+    .container {
+      padding: 20px;
+
+      column-gap: 8px;
     }
 
     .controls {
-      display: flex;
-      column-gap: 16px;
+      column-gap: 8px;
+    }
 
-      > * {
-        background: $white-transparent;
-        border-radius: 12px;
+    .logo {
+      margin: 0;
+      &__img {
+        height: 30px;
       }
     }
 
     .location {
-      padding: 12px 16px;
-      cursor: pointer;
+      padding: 8px 12px;
 
-      font-weight: 500;
+      &__text {
+        display: none;
+      }
+    }
+
+    .search-bar {
+      &__icon {
+        padding: 8px 12px;
+      }
     }
 
     .eye {
       padding: 8px;
-      cursor: pointer;
-    }
 
-    .lang {
-      padding: 12px 7px;
-      cursor: pointer;
+      &__icon {
+        width: 25px;
+      }
     }
 
     .profile {
-      overflow: hidden;
-      &__avatar {
-        padding: 8px 10px 8px;
-        background: $white-transparent-light;
+      height: 41px;
+    }
+  }
+}
 
-        border-radius: 12px;
+@media screen and (max-width: 600px) {
+  .header {
+    height: 800px;
+    row-gap: 150px;
+
+    padding: 0 20px;
+
+    &__content {
+      .heading {
+        font-size: 47px;
       }
 
-      &__burger {
-        padding: 8px 12px;
+      row-gap: 25px;
+
+      .suggestions {
+        font-size: 10px;
+        font-weight: 600;
+
+        row-gap: 15px;
+        .types-list,
+        .hashtags-list {
+          column-gap: 7px;
+          &__item {
+            border-radius: 10px;
+            padding: 10px 12px;
+            column-gap: 5px;
+
+            .icon {
+              width: 18px;
+            }
+          }
+        }
       }
-      cursor: pointer;
+
+      .search-bar {
+        padding: 8px;
+
+        &__input {
+          &::placeholder {
+            font-size: calc(1.5vw + 5px);
+            color: $black;
+            opacity: 0.5;
+          }
+        }
+
+        &__btn {
+          font-weight: 600;
+          font-size: 14px;
+          padding: 12px 20px;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+
+  .nav-bar {
+    .location {
+      display: none;
+    }
+    .eye {
+      display: none;
+    }
+    .lang {
+      display: none;
+    }
+
+    .profile__avatar {
+      display: none;
     }
   }
 }
