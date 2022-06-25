@@ -39,6 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+  width: 100%;
   cursor: pointer;
   position: relative;
   display: flex;
@@ -46,6 +47,11 @@ export default {
   background: $white;
   border-radius: 16px;
   overflow: hidden;
+
+  &__img {
+    align-self: center;
+    width: 100%;
+  }
 
   &__tag {
     position: absolute;
@@ -81,6 +87,7 @@ export default {
     font-weight: 500;
     font-size: 18px;
     line-height: 23px;
+    white-space: nowrap;
   }
 
   &__location {
@@ -96,6 +103,38 @@ export default {
 
   &__location-icon {
     width: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    border-radius: 12px;
+    &__content {
+      padding: 20px 17px;
+    }
+
+    &__tag {
+      top: 5%;
+      left: 5%;
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+
+    &__name {
+      white-space: normal;
+      font-size: 16px;
+    }
+
+    &__location {
+      font-size: 14px;
+
+      column-gap: 2px;
+      align-items: center;
+    }
+
+    &__like {
+      width: 20px;
+    }
   }
 }
 </style>

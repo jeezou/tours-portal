@@ -126,4 +126,38 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 1280px) {
+  .places {
+    padding: 50px 50px 80px 50px;
+    .container {
+      .heading {
+        text-align: center;
+      }
+      .cards {
+        grid-template-columns: 1fr 1fr;
+
+        justify-items: center;
+        row-gap: 40px;
+
+        > * {
+          max-width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .places {
+    padding: 25px 25px 40px 25px;
+    .container {
+      .cards {
+        row-gap: 25px;
+
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
 </style>
