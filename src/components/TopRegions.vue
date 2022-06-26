@@ -69,4 +69,29 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 1280px) {
+  .regions .container {
+    .heading {
+      text-align: center;
+    }
+    .cards {
+      grid-template-columns: 1fr 1fr;
+
+      row-gap: 40px;
+
+      justify-items: center;
+
+      > * {
+        max-width: 350px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .regions {
+    padding: 50px 25px;
+  }
+}
 </style>

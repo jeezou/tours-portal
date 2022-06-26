@@ -22,11 +22,28 @@ export default {
   border-radius: 16px;
   overflow: hidden;
 
+  display: flex;
+  flex-direction: column;
+
   &__name {
     padding: 32px 24px 24px 24px;
     color: $black;
     font-weight: 500;
     line-height: 23px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    border-radius: 12px;
+    &__name {
+      padding: 14px 20px 15px 15px;
+      font-size: 15px;
+    }
   }
 }
 </style>
