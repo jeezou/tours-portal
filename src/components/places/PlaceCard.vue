@@ -63,18 +63,18 @@ export default {
   },
   mounted() {
     const favourites = JSON.parse(localStorage.getItem("favourites") || "[]");
-    if (favourites.includes(this.name)) this.active = true;
+    if (favourites.includes(this.data.name)) this.active = true;
   },
   methods: {
     handleLike() {
       let favourites = JSON.parse(localStorage.getItem("favourites") || "[]");
       let inFavs = false;
-      if (favourites.includes(this.name)) inFavs = true;
+      if (favourites.includes(this.data.name)) inFavs = true;
       if (!inFavs) {
-        favourites.push(this.name);
+        favourites.push(this.data.name);
         this.active = true;
       } else {
-        favourites = favourites.filter((el) => el != this.name);
+        favourites = favourites.filter((el) => el != this.data.name);
         this.active = false;
       }
       localStorage.setItem("favourites", JSON.stringify(favourites));
@@ -136,6 +136,11 @@ export default {
 
     path {
       transition: all 0.15s ease-in-out;
+    }
+
+    transition: transform 0.15s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
     }
 
     &:hover path {
