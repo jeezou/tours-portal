@@ -68,4 +68,53 @@ export default {
     text-align: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .card {
+    min-width: 280px;
+    height: 400px;
+
+    padding: 70px 10px;
+
+    row-gap: 50px;
+
+    &__name {
+      font-size: 24px;
+      line-height: 150%;
+    }
+
+    &__img-wrapper {
+      width: 120px;
+      height: 120px;
+    }
+
+    &__img {
+      width: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    min-width: 250px;
+    height: 350px;
+
+    padding: 60px 10px;
+
+    row-gap: 45px;
+
+    &__name {
+      font-size: 22px;
+    }
+
+    &__img-wrapper {
+      width: 100px;
+      height: 100px;
+    }
+
+    &__img {
+      width: 50px;
+    }
+  }
+}
 </style>
