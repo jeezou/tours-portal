@@ -1,52 +1,6 @@
 <template>
   <header class="header">
-    <nav class="nav-bar">
-      <div class="container">
-        <div class="logo">
-          <img
-            src="../assets/images/logo-light.svg"
-            alt="logo"
-            class="logo__img"
-          />
-        </div>
-        <div class="controls">
-          <div class="location">
-            <img
-              class="location__icon"
-              src="../assets/icons/map-pin.svg"
-              alt="location ico"
-            />
-            <div class="location__text">Санкт-Петербург</div>
-          </div>
-          <div class="eye">
-            <img
-              src="../assets/icons/eye.svg"
-              alt="eye ico"
-              class="eye__icon"
-            />
-          </div>
-          <div class="lang">
-            <img
-              src="../assets/icons/ru.svg"
-              alt="lang ico"
-              class="eye__icon"
-            />
-          </div>
-          <div class="profile">
-            <img
-              src="../assets/icons/no-avatar.svg"
-              alt="avatar"
-              class="profile__avatar"
-            />
-            <img
-              src="../assets/icons/burger.svg"
-              alt="burger"
-              class="profile__burger"
-            />
-          </div>
-        </div>
-      </div>
-    </nav>
+    <nav-bar :isLight="false" :isSearch="false" />
     <div class="header__content">
       <h1 class="heading">Путешествуй по России онлайн</h1>
       <div class="search-bar">
@@ -62,7 +16,7 @@
           <li class="types-list__item">
             <div class="text">Проморолик</div>
             <img
-              src="../assets/icons/camera.svg"
+              src="@/assets/icons/camera.svg"
               alt="camera ico"
               class="icon"
             />
@@ -70,14 +24,14 @@
           <li class="types-list__item">
             <div class="text">Поиск по карте</div>
             <img
-              src="../assets/icons/search.svg"
+              src="@/assets/icons/search.svg"
               alt="search ico"
               class="icon"
             />
           </li>
           <li class="types-list__item">
             <div class="text">Идеи для путешествий</div>
-            <img src="../assets/icons/ideas.svg" alt="ideas ico" class="icon" />
+            <img src="@/assets/icons/ideas.svg" alt="ideas ico" class="icon" />
           </li>
         </ul>
         <ul class="hashtags-list">
@@ -92,15 +46,17 @@
 </template>
 
 <script>
+import NavBar from "@/components/header/NavBar.vue";
 export default {
   name: "Header",
+  components: { NavBar },
 };
 </script>
 
 <style lang="scss">
 .header {
   height: 1180px;
-  background: url("../assets/images/main-bg.jpg");
+  background: url("@/assets/images/main-bg.jpg");
   background-size: cover;
 
   padding: 0 100px;
@@ -168,6 +124,12 @@ export default {
         background: $skin;
 
         text-transform: uppercase;
+
+        transition: background 0.2s ease-in-out;
+
+        &:hover {
+          background: $skin-light;
+        }
       }
     }
 
@@ -190,6 +152,12 @@ export default {
           column-gap: 10px;
 
           cursor: pointer;
+
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            background: $white-transparent-light;
+          }
         }
       }
 
@@ -205,78 +173,6 @@ export default {
         }
       }
     }
-  }
-}
-
-.nav-bar {
-  position: relative;
-  z-index: 1;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-
-    padding: 24px;
-    align-items: center;
-
-    column-gap: 16px;
-  }
-
-  .logo {
-    background: rgba(0, 0, 0, 0);
-    margin-right: 21px;
-
-    cursor: pointer;
-  }
-
-  .controls {
-    display: flex;
-    column-gap: 16px;
-
-    > * {
-      background: $white-transparent;
-      border-radius: 12px;
-    }
-  }
-
-  .location {
-    padding: 12px 16px;
-    cursor: pointer;
-
-    display: flex;
-    column-gap: 8px;
-    align-items: center;
-
-    font-weight: 500;
-  }
-
-  .eye {
-    padding: 8px;
-    cursor: pointer;
-  }
-
-  .lang {
-    padding: 12px 7px;
-    cursor: pointer;
-  }
-
-  .profile {
-    overflow: hidden;
-    display: flex;
-    &__avatar {
-      padding: 8px 10px 8px;
-      background: $white-transparent-light;
-
-      border-radius: 12px;
-    }
-
-    &__burger {
-      padding: 8px 12px;
-    }
-    cursor: pointer;
   }
 }
 
@@ -304,50 +200,6 @@ export default {
           }
         }
       }
-    }
-  }
-  .nav-bar {
-    .container {
-      padding: 20px;
-
-      column-gap: 8px;
-    }
-
-    .controls {
-      column-gap: 8px;
-    }
-
-    .logo {
-      margin: 0;
-      &__img {
-        height: 30px;
-      }
-    }
-
-    .location {
-      padding: 8px 12px;
-
-      &__text {
-        display: none;
-      }
-    }
-
-    .search-bar {
-      &__icon {
-        padding: 8px 12px;
-      }
-    }
-
-    .eye {
-      padding: 8px;
-
-      &__icon {
-        width: 25px;
-      }
-    }
-
-    .profile {
-      height: 41px;
     }
   }
 }
@@ -404,22 +256,6 @@ export default {
           border-radius: 8px;
         }
       }
-    }
-  }
-
-  .nav-bar {
-    .location {
-      display: none;
-    }
-    .eye {
-      display: none;
-    }
-    .lang {
-      display: none;
-    }
-
-    .profile__avatar {
-      display: none;
     }
   }
 }

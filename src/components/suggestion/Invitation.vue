@@ -11,7 +11,7 @@
         </div>
         <button class="inv-card__btn">Оформить подписку</button>
       </div>
-      <img src="../assets/images/camera.png" alt="" class="inv-card__img" />
+      <img src="@/assets/images/camera.png" alt="" class="inv-card__img" />
     </div>
   </section>
 </template>
@@ -78,6 +78,12 @@ export default {
       width: fit-content;
 
       border-radius: 16px;
+
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 17px $box-shadow;
+      }
     }
 
     &__img {

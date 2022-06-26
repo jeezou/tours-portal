@@ -4,7 +4,7 @@
       <h2 class="heading">Интересные места</h2>
       <div class="cards">
         <template v-for="(card, index) in $options.cards" :key="index">
-          <PlaceCard
+          <place-card
             :img="require(`@/assets/images/places/${card.img}`)"
             :name="card.name"
             :tag="card.tag"
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import PlaceCard from "@/components/PlaceCard.vue";
+import PlaceCard from "@/components/places/PlaceCard.vue";
 
 export default {
   name: "Places",
@@ -123,6 +123,12 @@ export default {
       border-radius: 16px;
       color: $white;
       font-weight: 700;
+
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background: $primary-light;
+      }
     }
   }
 }

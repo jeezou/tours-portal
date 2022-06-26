@@ -1,25 +1,23 @@
 <template>
   <div class="root">
     <Header />
-    <div class="container">
-      <Places />
-      <FlipGame />
-      <TopRegions />
-      <Tours />
-      <Invitation />
-      <Footer />
-    </div>
+    <Places />
+    <FlipGame />
+    <TopRegions />
+    <Tours />
+    <Invitation />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Footer from "@/components/Footer.vue";
-import Header from "@/components/Header.vue";
-import Places from "@/components/Places.vue";
-import TopRegions from "@/components/TopRegions.vue";
-import Invitation from "@/components/Invitation.vue";
-import Tours from "@/components/Tours.vue";
-import FlipGame from "@/components/FlipGame.vue";
+import Footer from "@/components/footer/Footer.vue";
+import Header from "@/components/header/Header.vue";
+import Places from "@/components/places/Places.vue";
+import TopRegions from "@/components/top-regions/TopRegions.vue";
+import Invitation from "@/components/suggestion/Invitation.vue";
+import Tours from "@/components/tours/Tours.vue";
+import FlipGame from "@/components/flip-game/FlipGame.vue";
 
 export default {
   name: "Error",

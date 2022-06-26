@@ -25,6 +25,12 @@ export default {
   display: flex;
   flex-direction: column;
 
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 20px $box-shadow;
+  }
+
   &__name {
     padding: 32px 24px 24px 24px;
     color: $black;

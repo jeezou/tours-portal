@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container">
       <div class="introduction">
-        <img src="../assets/images/logo-dark.svg" alt="logo" class="logo" />
+        <img src="@/assets/images/logo-dark.svg" alt="logo" class="logo" />
         <p class="introduction__p">
           RT360.RU – это возможность увидеть памятные места, музеи,
           императорские дворцы, театры, древние и современные города, храмовые
@@ -12,7 +12,7 @@
       </div>
       <div class="links">
         <div class="back-to-top" @click="backtoTop">
-          <img src="../assets/icons/back-to-top.svg" alt="back to top ico" />
+          <img src="@/assets/icons/back-to-top.svg" alt="back to top ico" />
         </div>
         <div class="group">
           <h3 class="group__heading">Основное</h3>
@@ -46,14 +46,14 @@
             <li class="group__item">
               <a href="#"
                 ><img
-                  src="../assets/icons/facebook.svg"
+                  src="@/assets/icons/facebook.svg"
                   alt="facebook ico"
                   class="img"
               /></a>
             </li>
             <li class="group__item">
               <a href="#"
-                ><img src="../assets/icons/dzen.svg" alt="dzen ico" class="img"
+                ><img src="@/assets/icons/dzen.svg" alt="dzen ico" class="img"
               /></a>
             </li>
           </ul>

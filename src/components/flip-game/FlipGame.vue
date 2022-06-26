@@ -5,7 +5,7 @@
       <p class="desc">Видео, VR, Видео 360°, 3D</p>
       <div class="flip-cards">
         <template v-for="(card, index) in $options.cards" :key="index">
-          <FlipCard
+          <flip-card
             :img="require(`@/assets/images/places/${card.img}`)"
             :name="card.name"
             :location="card.location"
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import FlipCard from "@/components/FlipCard.vue";
+import FlipCard from "@/components/flip-game/FlipCard.vue";
 
 export default {
   name: "FlipGame",
@@ -61,7 +61,7 @@ export default {
   justify-content: center;
 
   background: $cards;
-  background-image: url("../assets/images/pattern.png"),
+  background-image: url("@/assets/images/pattern.png"),
     linear-gradient(144deg, $cards 72%, $primary 100%);
   background-size: repeat;
 

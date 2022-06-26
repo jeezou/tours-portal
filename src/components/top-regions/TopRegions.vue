@@ -4,7 +4,7 @@
       <h2 class="heading">Топ посещаемых регионов</h2>
       <div class="cards">
         <template v-for="(card, index) in $options.cards" :key="index">
-          <RegionCard
+          <region-card
             :img="require(`@/assets/images/places/${card.img}`)"
             :name="card.name"
           />
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import RegionCard from "@/components/RegionCard.vue";
+import RegionCard from "@/components/top-regions/RegionCard.vue";
 
 export default {
   name: "TopRegions",

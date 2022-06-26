@@ -23,7 +23,7 @@
             {{ location }}
             <span>
               <img
-                src="../assets/icons/map-pin-gray.svg"
+                src="@/assets/icons/map-pin-gray.svg"
                 alt="location ico"
                 class="card__location-icon"
               />

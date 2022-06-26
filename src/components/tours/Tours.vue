@@ -10,22 +10,18 @@
           @click="horScrollBtnHandler('left')"
           v-if="!leftEdge"
         >
-          <img class="icon" src="../assets/icons/arrow.svg" alt="scroll left" />
+          <img class="icon" src="@/assets/icons/arrow.svg" alt="scroll left" />
         </div>
         <div
           class="cards-wrapper__scroll-right"
           @click="horScrollBtnHandler('right')"
           v-if="!rightEdge"
         >
-          <img
-            class="icon"
-            src="../assets/icons/arrow.svg"
-            alt="scroll right"
-          />
+          <img class="icon" src="@/assets/icons/arrow.svg" alt="scroll right" />
         </div>
         <div class="cards" ref="emojiCards" @scroll="scrollEventHandler">
           <template v-for="(card, index) in $options.cards" :key="index">
-            <EmojiCard
+            <emoji-card
               :img="require(`@/assets/images/emojis/${card.img}`)"
               :name="card.name"
             />
@@ -37,7 +33,7 @@
 </template>
 
 <script>
-import EmojiCard from "@/components/EmojiCard.vue";
+import EmojiCard from "@/components/tours/EmojiCard.vue";
 
 export default {
   name: "Tours",
