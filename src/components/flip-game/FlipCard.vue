@@ -67,7 +67,6 @@ export default {
 .flip-card {
   cursor: pointer;
   border-radius: 16px;
-  overflow: hidden;
   position: relative;
   box-sizing: content-box;
 
@@ -79,10 +78,16 @@ export default {
     position: relative;
     width: 100%;
     text-align: center;
-    transition: all 0.6s;
     transform-style: preserve-3d;
     width: 280px;
     height: 395px;
+
+    margin-left: 10px;
+    transition: box-shadow 0.2s, transform 0.6s;
+
+    &:hover {
+      box-shadow: 0 0 20px $white-transparent-light;
+    }
 
     border-radius: 24px;
     &--active {

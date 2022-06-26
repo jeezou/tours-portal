@@ -143,7 +143,7 @@ export default {
   .heading {
     width: 100%;
     max-width: 1320px;
-    margin: 0 0 35px 0;
+    margin: 0 0 25px 0;
     box-sizing: border-box;
     color: $white;
     font-size: 36px;
@@ -178,11 +178,22 @@ export default {
     }
 
     &__scroll-right {
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
       right: 10px;
     }
 
     &__scroll-left {
-      transform: scaleX(-1);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scaleX(-1) scale(1.2);
+      }
+
+      transform: scaleX(-1) scale(1);
       left: 10px;
     }
   }
@@ -190,7 +201,7 @@ export default {
   .cards {
     box-sizing: border-box;
 
-    padding: 0 35px 0 25px;
+    padding: 20px 35px 20px 25px;
     width: 100vw;
     display: flex;
 

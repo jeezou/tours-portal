@@ -44,7 +44,11 @@ export default {
 
   padding: 85px 0 10px;
 
-  box-shadow: 0px 8px 10px rgba(156, 164, 169, 0.2);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.03);
+  }
 
   &__img-wrapper {
     width: 150px;

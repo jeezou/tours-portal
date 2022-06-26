@@ -180,6 +180,35 @@ export default {
         }
       }
 
+      &--main,
+      &--about {
+        .group__list {
+          .group__item {
+            > * {
+              position: relative;
+
+              &:after {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 2px;
+                bottom: -3px;
+                left: 0;
+                transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+                background: $black;
+              }
+
+              &:hover {
+                &:after {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+
       &__item > * {
         text-decoration: none;
         color: $black;
