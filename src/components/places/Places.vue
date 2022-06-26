@@ -166,4 +166,14 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .places {
+    .container {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
 </style>
