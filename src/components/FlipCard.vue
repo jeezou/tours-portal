@@ -3,9 +3,8 @@
     <div
       class="flip-card__inner"
       :class="{ 'flip-card__inner--active': active }"
-      :style="{ background: color }"
     >
-      <div class="flip-card__front">
+      <div class="flip-card__front" :style="{ background: color }">
         <div class="flip-card__main-index">
           {{ index !== 0 ? `0${index}` : "0" }}
         </div>
@@ -76,22 +75,14 @@ export default {
     position: relative;
     width: 100%;
     text-align: center;
-    transition: transform 0.6s;
+    transition: all 0.6s;
     transform-style: preserve-3d;
     width: 280px;
     height: 395px;
 
     border-radius: 24px;
-
     &--active {
       transform: rotateY(180deg);
-      background: transparent;
-
-      // .flip-card__front {
-      //   opacity: 0;
-      //   visibility: hidden;
-      //   background-color: transparent;
-      // }
     }
   }
 
@@ -194,6 +185,19 @@ export default {
     &:hover {
       color: $white;
       background: $primary-light;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .flip-card {
+    &__inner {
+      width: 250px;
+      height: 370px;
+    }
+
+    &__content {
+      padding: 25px 24px;
     }
   }
 }
