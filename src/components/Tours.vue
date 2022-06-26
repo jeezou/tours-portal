@@ -216,6 +216,16 @@ export default {
     .heading {
       margin: 0 50px 35px 50px;
     }
+
+    .cards-wrapper {
+      &__scroll-left,
+      &__scroll-right {
+        width: 40px;
+        .icon {
+          height: 40px;
+        }
+      }
+    }
   }
 }
 

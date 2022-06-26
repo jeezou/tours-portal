@@ -126,4 +126,10 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .flip-game {
+    padding: 60px 25px 150px 25px;
+  }
+}
 </style>

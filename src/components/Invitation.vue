@@ -44,6 +44,8 @@ export default {
     position: relative;
 
     &__content {
+      position: relative;
+      z-index: 2;
       display: flex;
       flex-direction: column;
 
@@ -82,6 +84,55 @@ export default {
       position: absolute;
       bottom: 0;
       right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .invitation {
+    padding: 100px 50px;
+    .inv-card {
+      &__content {
+        width: 100%;
+      }
+
+      &__img {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .invitation {
+    padding: 60px 25px 100px 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .invitation {
+    .inv-card {
+      padding: 35px;
+      &__content {
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .invitation {
+    .inv-card {
+      &__heading {
+        font-size: 25px;
+        line-height: 130%;
+      }
+
+      &__par {
+        font-size: 18px;
+        line-height: 120%;
+      }
     }
   }
 }
