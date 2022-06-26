@@ -1,16 +1,19 @@
 <template>
   <div class="card">
-    <div class="card__tag" :style="{ background: color }">
-      {{ tag }}
+    <div class="card__tag" :style="{ background: data.color }">
+      {{ data.tag }}
     </div>
-    <img :src="img" alt="name" class="card__img" />
-
+    <img
+      :src="require(`@/assets/images/places/${data.img}`)"
+      alt="name"
+      class="card__img"
+    />
     <div class="card__content">
       <div class="card__name">
-        {{ name }}
+        {{ data.name }}
       </div>
       <div class="card__location">
-        {{ location }}
+        {{ data.location }}
         <span>
           <img
             src="@/assets/icons/map-pin-gray.svg"
@@ -48,11 +51,10 @@
 export default {
   name: "PlaceCard",
   props: {
-    img: String,
-    name: String,
-    location: String,
-    tag: String,
-    color: String,
+    data: {
+      type: Object,
+      default: () => {},
+    },
   },
   data() {
     return {

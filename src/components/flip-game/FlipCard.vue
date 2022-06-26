@@ -4,7 +4,7 @@
       class="flip-card__inner"
       :class="{ 'flip-card__inner--active': active }"
     >
-      <div class="flip-card__front" :style="{ background: color }">
+      <div class="flip-card__front" :style="{ background: data.color }">
         <div class="flip-card__main-index">
           {{ index !== 0 ? `0${index}` : "0" }}
         </div>
@@ -16,11 +16,15 @@
         </div>
       </div>
       <div class="flip-card__back">
-        <img :src="img" alt="name" class="flip-card__img" />
+        <img
+          :src="require(`@/assets/images/places/${data.img}`)"
+          alt="name"
+          class="flip-card__img"
+        />
         <div class="flip-card__content">
-          <div class="flip-card__name">{{ name }}</div>
+          <div class="flip-card__name">{{ data.name }}</div>
           <div class="flip-card__location">
-            {{ location }}
+            {{ data.location }}
             <span>
               <img
                 src="@/assets/icons/map-pin-gray.svg"
@@ -45,10 +49,10 @@ export default {
     };
   },
   props: {
-    img: String,
-    name: String,
-    location: String,
-    color: String,
+    data: {
+      type: Object,
+      default: () => {},
+    },
     index: Number,
   },
   methods: {

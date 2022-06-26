@@ -3,11 +3,8 @@
     <div class="container">
       <h2 class="heading">Топ посещаемых регионов</h2>
       <div class="cards">
-        <template v-for="(card, index) in $options.cards" :key="index">
-          <region-card
-            :img="require(`@/assets/images/places/${card.img}`)"
-            :name="card.name"
-          />
+        <template v-for="card in $options.cards" :key="card">
+          <region-card :data="card" />
         </template>
       </div>
     </div>

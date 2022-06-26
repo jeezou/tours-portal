@@ -3,14 +3,8 @@
     <div class="container">
       <h2 class="heading">Интересные места</h2>
       <div class="cards">
-        <template v-for="(card, index) in $options.cards" :key="index">
-          <place-card
-            :img="require(`@/assets/images/places/${card.img}`)"
-            :name="card.name"
-            :tag="card.tag"
-            :color="card.color"
-            :location="card.location"
-          />
+        <template v-for="card in $options.cards" :key="card">
+          <place-card :data="card" />
         </template>
       </div>
       <div class="btn">Посмотреть все места</div>

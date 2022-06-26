@@ -12,9 +12,13 @@
       </div>
       <div class="links">
         <div class="back-to-top" @click="backtoTop">
-          <img src="@/assets/icons/back-to-top.svg" alt="back to top ico" />
+          <img
+            class="back-to-top__img"
+            src="@/assets/icons/back-to-top.svg"
+            alt="back to top ico"
+          />
         </div>
-        <div class="group">
+        <div class="group group--main">
           <h3 class="group__heading">Основное</h3>
           <ul class="group__list">
             <li class="group__item">
@@ -30,7 +34,7 @@
             <li class="group__item"><a href="#">Наш инстаграмм</a></li>
           </ul>
         </div>
-        <div class="group">
+        <div class="group group--about">
           <h3 class="group__heading">О нас</h3>
           <ul class="group__list">
             <li class="group__item"><a href="#">О проекте</a></li>
@@ -40,7 +44,7 @@
             </li>
           </ul>
         </div>
-        <div class="group">
+        <div class="group group--socials">
           <h3 class="group__heading">Соц сети</h3>
           <ul class="group__list group__list--inline">
             <li class="group__item">
@@ -146,6 +150,15 @@ export default {
       right: 0;
       bottom: 64px;
       cursor: pointer;
+
+      transition: all 0.2s ease-in-out;
+
+      height: fit-content;
+      border-radius: 50%;
+
+      &:hover {
+        box-shadow: 0 0 20px $box-shadow;
+      }
     }
 
     .group {
@@ -193,32 +206,9 @@ export default {
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1280px) {
   .footer {
-    .introduction {
-      padding-top: 40px;
-      padding-right: 30px;
-    }
-
-    .links {
-      padding-top: 40px;
-      padding-left: 25px;
-      grid-template-columns: 2fr 1fr 1fr;
-      .group {
-        &__list {
-          &--inline {
-            flex-direction: column;
-            align-items: center;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .footer {
-    padding: 0 25px;
+    padding: 0 100px;
     .container {
       grid-template-areas:
         "intro intro"
@@ -238,12 +228,58 @@ export default {
     .links {
       padding: 40px 0;
       grid-template-columns: 1.5fr 1fr 1fr;
+    }
+
+    .rights,
+    .contacts {
+      padding: 20px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .footer {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    .links {
+      padding: 40px 0;
+
+      grid-template-columns: 1.5fr 1fr;
+
+      grid-template-areas:
+        "main about"
+        "main socials";
+      row-gap: 45px;
+
+      .back-to-top {
+        top: 40px;
+
+        &__img {
+          width: 45px;
+        }
+      }
 
       .group {
-        &__list {
-          &--inline {
-            flex-direction: row;
-          }
+        &--main {
+          grid-area: main;
+        }
+
+        &--about {
+          grid-area: about;
+        }
+
+        &--socials {
+          grid-area: socials;
         }
       }
     }
@@ -255,25 +291,27 @@ export default {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 450px) {
   .footer {
     .links {
       padding: 40px 0;
-      grid-template-columns: 2fr 1fr 1fr;
 
-      .group {
-        &__list {
-          &--inline {
-            align-items: center;
-            flex-direction: column;
-          }
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "main"
+        "about"
+        "socials";
+
+      position: relative;
+
+      .back-to-top {
+        position: absolute;
+        bottom: 40px;
+        top: auto;
+        &__img {
+          width: 45px;
         }
       }
-    }
-
-    .rights,
-    .contacts {
-      padding: 20px 0;
     }
   }
 }

@@ -1,7 +1,11 @@
 <template>
   <div class="card">
-    <img :src="img" alt="name" class="card__img" />
-    <div class="card__name" v-html="name"></div>
+    <img
+      :src="require(`@/assets/images/places/${data.img}`)"
+      alt="name"
+      class="card__img"
+    />
+    <div class="card__name" v-html="data.name"></div>
   </div>
 </template>
 
@@ -9,8 +13,10 @@
 export default {
   name: "PlaceCard",
   props: {
-    img: String,
-    name: String,
+    data: {
+      type: Object,
+      default: () => {},
+    },
   },
 };
 </script>

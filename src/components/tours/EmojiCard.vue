@@ -1,9 +1,13 @@
 <template>
   <div class="card">
     <div class="card__img-wrapper">
-      <img :src="img" alt="name" class="card__img" />
+      <img
+        :src="require(`@/assets/images/emojis/${data.img}`)"
+        alt="name"
+        class="card__img"
+      />
     </div>
-    <div class="card__name" v-html="name"></div>
+    <div class="card__name" v-html="data.name"></div>
   </div>
 </template>
 
@@ -11,8 +15,10 @@
 export default {
   name: "EmojiCard",
   props: {
-    img: String,
-    name: String,
+    data: {
+      type: Object,
+      default: () => {},
+    },
   },
 };
 </script>

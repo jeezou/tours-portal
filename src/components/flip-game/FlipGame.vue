@@ -6,10 +6,7 @@
       <div class="flip-cards">
         <template v-for="(card, index) in $options.cards" :key="index">
           <flip-card
-            :img="require(`@/assets/images/places/${card.img}`)"
-            :name="card.name"
-            :location="card.location"
-            :color="card.color"
+          :data="card"
             :index="index"
           />
         </template>

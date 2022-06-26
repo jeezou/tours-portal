@@ -20,11 +20,8 @@
           <img class="icon" src="@/assets/icons/arrow.svg" alt="scroll right" />
         </div>
         <div class="cards" ref="emojiCards" @scroll="scrollEventHandler">
-          <template v-for="(card, index) in $options.cards" :key="index">
-            <emoji-card
-              :img="require(`@/assets/images/emojis/${card.img}`)"
-              :name="card.name"
-            />
+          <template v-for="card in $options.cards" :key="card">
+            <emoji-card :data="card" />
           </template>
         </div>
       </div>
