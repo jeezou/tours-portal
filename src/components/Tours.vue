@@ -134,21 +134,28 @@ export default {
     align-items: center;
 
     max-width: 100%;
+    margin: 0 100px;
   }
+
   .wrapper {
     width: 100%;
-    max-width: 1320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 100px;
     box-sizing: border-box;
   }
+
   .heading {
     width: 100%;
-    margin: 0 100px 35px 100px;
+    max-width: 1320px;
+    margin: 0 0 35px 0;
     box-sizing: border-box;
     color: $white;
     font-size: 36px;
     font-weight: 500;
     line-height: 56px;
-    width: 100%;
   }
 
   .cards-wrapper {
@@ -213,8 +220,8 @@ export default {
 @media screen and (max-width: 768px) {
   .tours {
     padding: 70px 0 80px 0;
-    .heading {
-      margin: 0 50px 35px 50px;
+    .wrapper {
+      padding: 0 50px;
     }
 
     .cards-wrapper {
@@ -231,8 +238,8 @@ export default {
 
 @media screen and (max-width: 500px) {
   .tours {
-    .heading {
-      margin: 0 25px 35px 25px;
+    .wrapper {
+      padding: 0 25px;
     }
   }
 }
