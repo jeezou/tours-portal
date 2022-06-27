@@ -175,6 +175,13 @@ export default {
   .profile {
     display: flex;
     overflow: hidden;
+    width: fit-content;
+    box-sizing: border-box;
+
+    &__avatar {
+      padding: 0;
+      padding: 2px;
+    }
 
     &--no-avatar {
       .profile__avatar {
@@ -182,13 +189,6 @@ export default {
         background: $white-transparent-light;
         border-radius: 12px;
       }
-    }
-
-    &__avatar {
-      padding: 0;
-      padding: 2px;
-
-      width: 100%;
     }
 
     &__burger {
